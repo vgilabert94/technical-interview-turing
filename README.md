@@ -63,14 +63,14 @@ To train a new class, you need to follow these steps:
 6. **Hyperparameter Tuning**: Fine-tune the model's hyperparameters, such as learning rate and batch size, to optimize its performance during training.  
 
 Problems that we could have during training:  
-1. Lack of Data: If there are insufficient labeled data to train an effective model, transfer learning can be employed. This technique leverages a pre-trained model as a starting point and fine-tunes it to adapt to the specific dataset, requiring fewer labeled examples.
-2. Data Quality Issues: Ensuring that data is clean and accurately labeled is crucial. Manual inspection and correction of mislabeled data can help mitigate this problem, ensuring that the model learns from reliable information and improves its performance.
-3. Overfitting: Occurs when the model becomes too specialized in the training data and fails to generalize well to unseen data. Techniques such as data augmentation, regularization (e.g., L2 regularization), and reducing the learning rate can help mitigate this risk by encouraging the model to learn more generalizable features.
+1. **Lack of Data**: If there are insufficient labeled data to train an effective model, transfer learning can be employed. This technique leverages a pre-trained model as a starting point and fine-tunes it to adapt to the specific dataset, requiring fewer labeled examples.
+2. **Data Quality Issues**: Ensuring that data is clean and accurately labeled is crucial. Manual inspection and correction of mislabeled data can help mitigate this problem, ensuring that the model learns from reliable information and improves its performance.
+3. **Overfitting**: Occurs when the model becomes too specialized in the training data and fails to generalize well to unseen data. Techniques such as data augmentation, regularization (e.g., L2 regularization), and reducing the learning rate can help mitigate this risk by encouraging the model to learn more generalizable features.
 
 When estimating how much data we need and what results to expect, it's important to consider the complexity of the new categories and how much they vary. This could mean we need hundreds or even thousands of data points.   
 In the evaluation stage, we need to carefully analyze how well our algorithm is performing. Using specific metrics like accuracy, precision, recall, and F1 score helps us understand how good our model is at detecting objects and finding the right balance between precision and recall. We also look at metrics like Intersection over Union (IoU), Mean Average Precision (mAP), and Mean Average Recall (mAR) to see how well our model performs across different situations and types of objects.
 
-Improving performance:  
+**Improving performance:** 
 As I have discussed in this section, there are a few techniques we can use for improve results. For example, transfer learning lets us take a pre-trained model and adjust it to recognize our new categories. Data augmentation is another useful technique, where we make our training data more diverse by applying random changes to the images. We can also use methods like L2 regularization to stop our model from getting too focused on the training data and batch normalization to speed up the training process. Finally, ensemble learning combines predictions from multiple models to make our overall results more reliable and robust. By using these techniques, we can make sure our object detection models work well in a wide range of situations.
 
 
