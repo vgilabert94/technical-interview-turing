@@ -13,9 +13,9 @@ Author: Vicent Gilabert Mañó
 To create an object detector (cars and pedestrians), we can use different techniques and algorithms. Starting with the classics of computer vision, there are algorithms such as HoG (Histogram of Gradients) + SVM (Support Vector Machine) that can be used to detect people and cars with minimal training.  
 Currently, the state of the art is in deep learning models such as YOLO (You Only Look Once), SSD (Single Shot MultiBox Detector), Faster R-CNN, among others. For our problem we will use YOLO with the ultralytics python library. Training will not be necessary as it provides us with the weights to perform the inference.
 
-- client.py --> Client file to send a request of image using flask.
-- object_detector_app/server.py --> Server file to recieve an image in base64 using flask and procces image using detector.py.
-- object_detector_app/detector.py --> ObjectDetector class to process image for detect object using YOLO (Ultralytics).
+- **client.py** --> Client file to send a request of image using flask.
+- **object_detector_app/server.py** --> Server file to recieve an image in base64 using flask and procces image using detector.py.
+- **object_detector_app/detector.py** --> ObjectDetector class to process image for detect object using YOLO (Ultralytics).
     - About this model (YOLO) is trained with 80 classes of objects (COCO Dataset). In our case, we only need person and car (0 and 2).
     - In order to create an efficient solution, we could re-train with only the needed classes or keep only the neurons for this classes. 
 
